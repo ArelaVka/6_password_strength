@@ -1,3 +1,6 @@
+def get_passwords_blacklist(path_to_file):
+	with open(path_to_file, 'r') as blacklist:
+		return blacklist.read().split()
 
 
 def get_password_strength(password):
@@ -5,4 +8,5 @@ def get_password_strength(password):
 
 
 if __name__ == '__main__':
-    pass
+    path_to_blacklist_file = 'blacklist.txt'
+    print(get_passwords_blacklist(path_to_blacklist_file))
