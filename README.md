@@ -24,12 +24,7 @@ Example:
 ```cmd
 C:\Python\python.exe C:\6_password_strength\password_strength.py C:\6_password_strength\blacklist.txt
 Please, enter your password: QWE123!qqwwee
-1) Lenght test - OK
-2) Blacklist test - OK
-3) Case sensitivity test - OK
-4) Include number test - OK
-5) Include special symbols test - OK
-6) Include date or phone test - OK
+
 Your password strenght is  10 (max - 10)
 ```
 
