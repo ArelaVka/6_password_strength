@@ -1,6 +1,37 @@
 # Password Strength Calculator
 
-[TODO. There will be project description]
+The script allows you to analyze the entered password according to the security criteria:
+* Lenght test (check minimal lenght of password)
+* Blacklist test (checks for a word in the blacklist)
+* Case sensitivity test (check use of both upper-case and lower-case letters)
+* Include number test (check use of numbers)
+* Include special symbols test (check use of some special symbols, ex. @, $, etc...)
+* Include date or phone test (check that password don't use any date or phone number)
+
+Result of checking is security coefficient (min - 1, max - 10)
+
+Start on Windows (cmd)
+```cmd
+C:\Python\python.exe C:\password_strength.py <path_to_txt_blacklist>
+```
+
+Start on linux (bash)
+```bash
+$ python password_strength.py <path_to_txt_blacklist>
+```
+
+Example:
+```cmd
+C:\Python\python.exe C:\6_password_strength\password_strength.py C:\6_password_strength\blacklist.txt
+Please, enter your password: QWE123!qqwwee
+1) Lenght test - OK
+2) Blacklist test - OK
+3) Case sensitivity test - OK
+4) Include number test - OK
+5) Include special symbols test - OK
+6) Include date or phone test - OK
+Your password strenght is  10 (max - 10)
+```
 
 # Project Goals
 
