@@ -1,7 +1,7 @@
 # Password Strength Calculator
 
 The script allows you to analyze the entered password according to the security criteria:
-* Lenght test (check minimal lenght of password)
+* Length test (check minimal length of password)
 * Blacklist test (checks for a word in the blacklist)
 * Case sensitivity test (check use of both upper-case and lower-case letters)
 * Include number test (check use of numbers)
