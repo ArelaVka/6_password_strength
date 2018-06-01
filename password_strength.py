@@ -1,6 +1,7 @@
 import re
 import sys
 import os
+import getpass
 
 
 def make_blacklist(path_of_file):
@@ -56,16 +57,16 @@ def include_spec_symbol_testing(test_password):
 
 
 def include_date_and_phone_testing(test_password):
-    if not (re.search(r'\d{2}-\d{2}-\d{4}', test_password)) or not (re.match(
-            r'\d{2}\.\d{2}\.\d{4}', test_password)) or not (re.match(
-            r'(7|8|\+7)\(\d{3}\)\d{3}-\d{2}-\d{2}', test_password)):
+    if not (re.search('\d{2}-\d{2}-\d{4}', test_password)) or not (re.search(
+            '\d{2}\.\d{2}\.\d{4}', test_password)) or not (re.search(
+            '(7|8|\+7)\(\d{3}\)\d{3}-\d{2}-\d{2}', test_password)):
         return 2
     else:
         return 0
 
 
 if __name__ == '__main__':
-    password = input('Please, enter your password: ')
+    password = getpass.getpass(prompt='Enter password to check: ')
     password_strength = 1 + blacklist_testing(
         password) + length_testing(password) + case_sensitivity_testing(
         password) + include_number_testing(
