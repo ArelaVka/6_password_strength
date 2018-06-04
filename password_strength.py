@@ -67,9 +67,13 @@ def include_date_and_phone_testing(test_password):
 
 if __name__ == '__main__':
     password = getpass.getpass(prompt='Enter password to check: ')
-    password_strength = 1 + blacklist_testing(
-        password) + length_testing(password) + case_sensitivity_testing(
-        password) + include_number_testing(
-        password) + include_spec_symbol_testing(
-        password) + include_date_and_phone_testing(password)
-    print('Your password strength is',  password_strength, '(max - 10)')
+    min_password_strength = 1
+    if length_testing(password) != 0:
+        password_strength = min_password_strength + blacklist_testing(
+            password) + length_testing(password) + case_sensitivity_testing(
+            password) + include_number_testing(
+            password) + include_spec_symbol_testing(
+            password) + include_date_and_phone_testing(password)
+        print('Your password strength is',  password_strength, '(max - 10)')
+    else:
+        print('Your password is too weak (length_testing not passed)')
