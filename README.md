@@ -22,10 +22,10 @@ $ python password_strength.py <path_to_txt_blacklist>
 
 Example:
 ```cmd
-C:\Python\python.exe C:\6_password_strength\password_strength.py C:\6_password_strength\blacklist.txt
-Please, enter your password: QWE123!qqwwee
-
-Your password strenght is  10 (max - 10)
+C:\>python C:\GIT\6_password_strength\password_strength.py C:\GIT\6_password_strength\blacklist.txt
+Blacklist loading - OK
+Enter password to check:
+Your password strength is 8 (max - 10)
 ```
 
 # Project Goals
